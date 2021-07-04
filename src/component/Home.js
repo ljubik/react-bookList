@@ -5,9 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import BookTable from '../component/BookTable';
 import Header from "../component/Header";
 import AddBook from '../component/AddBook';
-import data from '../db.json';
+// import data from '../db.json';
 
-function App(props){
+function Home(props){
   const [ booksState, setBooks ] = useState([
     { "id": 1, "book_title": "my json-server", "author_name": "typicode","category":"fantasy", "isbn": 2008955455},
     { "id": 2, "book_title": "all json-server2", "author_name": "revers","category":"horror", "isbn": 20082335488},
@@ -15,7 +15,7 @@ function App(props){
     { "id": 4, "book_title": "json-server4", "author_name": "anderson","category":"horror", "isbn": 2008955400},
     { "id": 5, "book_title": "json-server5", "author_name": "and55erson","category":"horror", "isbn": 2098255400}
   ]);
-  const [ toDoList, setToDoList ] = useState(data);
+  // const [ toDoList, setToDoList ] = useState(data);
   
   const handleToggle = (id) => {
     let mapped = toDoList.map(task => {
@@ -44,7 +44,7 @@ function App(props){
   <>
     <div className = "App" >
     {/* <Header /> */}
-    {/* <AddBook addBook={addBook}/> */}
+    <AddBook addBook={addBook}/>
     <div>
     <BookTable books={booksState} onDelete={onDelete} />
     {/* <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/> */}
@@ -56,4 +56,4 @@ function App(props){
 
 
 
-export default App;
+export default Home;

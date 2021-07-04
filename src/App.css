@@ -2,19 +2,32 @@
   background-color: rgb(245, 245, 245);
   color: black;
   text-align: center;
-}
-
-.app {
   padding: 30px;
-  background-color: rgb(197, 164, 98);
 }
-
-
 
 ul {
   list-style: none;
+  display: flex;
+}
+
+li {
+  display: flex;
+  padding: auto;
+  margin: auto;
 }
 
 h1{
   text-align: center;
 }
+
+h2{
+  text-align: center;
+  color: blue;
+}
+
+/* input{
+  display: flex;
+  padding: auto;
+  margin: auto;
+} */
+
