@@ -26,12 +26,6 @@ function App(props){
     setToDoList(mapped);
   }
 
-  const handleFilter = () => {
-    let filtered = toDoList.filter(task => {
-      return !task.complete;
-    });
-    setToDoList(filtered);
-  }
 
   const onDelete = (id) => {
     let filtered = booksState.filter(books => {
@@ -40,16 +34,12 @@ function App(props){
     setBooks(filtered);
   }
   
-  const addTask = (userInput) => {
-    let copy = [...toDoList];
-    copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
-    setToDoList(copy);
-  }
 
-  const addBook= (...userInput) => {
+  const addBook = (userInputTitle, userInputAutor, userInputCategory, userInputIsbn) => {
     let copybook = [...booksState];
     copybook = [...copybook, { id: booksState.length + 1, book_title: userInputTitle, author_name: userInputAutor, category: userInputCategory, isbn: userInputIsbn }];
-    setToDoList(copybook);
+    console.log("add book", copybook)
+    setBooks(copybook);
   }
 
   return (

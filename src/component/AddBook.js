@@ -5,7 +5,8 @@ import { Button, Card, Form, Table} from 'react-bootstrap';
 
 function AddBook({addBook, userInputTitle, userInputAutor, userInputCategory, userInputIsbn}){
     const [ userInput, setUserInput ] = useState('');
-
+    
+    console.log("start add blok", userInputTitle)
 
     
     const handleChange = (e) => {
